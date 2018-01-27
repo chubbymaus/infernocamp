@@ -1,0 +1,31 @@
+
+<div class="container">
+
+<h1><%= @topic_name.title %></h1>
+  <div class="row">
+    
+      <% @courses.each do |course| %>
+             <div class="col-md-4">
+              <div class="card">
+                <div class="card-body">
+                  
+                    <%= image_tag course.thumb_image, class: "thumb_image" %>
+                   
+                  
+                    <h2><%= link_to course.title, course %></h2>
+                      <p class="text-muted card-text">
+                         <%= course.topic.title %>
+                      </p>
+                    <hr>
+                    <p><%= truncate(course.description, :length => 110) %></p>
+                    <%= link_to 'View This Course', course, class:'btn btn-primary btn-block view-btn' %>
+                    <%= link_to 'Edit', edit_course_path(course), class:'btn btn-secondary btn-block' %>
+                    <%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-danger btn-block' %>
+                  
+                 </div>
+              </div>
+             </div> 
+
+      <% end %>
+  </div>
+</div>

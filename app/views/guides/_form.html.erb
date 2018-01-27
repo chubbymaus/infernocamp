@@ -1,0 +1,59 @@
+
+
+<%= form_with(model: guide, local: true) do |form| %>
+  <% if guide.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(guide.errors.count, "error") %> prohibited this guide from being saved:</h2>
+
+      <ul>
+      <% guide.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+ <div class="row">
+  <div class="col-md-6">
+    <div class="form-group">
+      <%= form.label :title %>
+      <%= form.text_field :title, id: :guide_title, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= form.label :course_id %>
+      <%= form.collection_select(:course_id, Course.all, :id, :title,
+                                {
+                                  include_blank: true
+                                },
+                                class: 'form-control'
+                              )
+      %>
+    </div>
+
+
+    <div class="form-group">
+      <%= form.label :video_link %>
+      <%= form.text_field :video_link, id: :guide_video_link, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= form.label :thumb_image %>
+      <%= form.text_field :thumb_image, id: :guide_thumb_image, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= form.label :order_id %>
+      <%= form.number_field :order_id, id: :guide_course_id, class: 'form-control' %>
+    </div>
+
+  </div>
+  <div class="col-md-6">
+    <div class="form-group">
+      <%= form.label :body %>
+      <%= form.text_area :body, id: :guide_body, class: 'form-control', rows: 15, placeholder: 'Content' %>
+    </div>
+  </div>
+</div>
+  <div class="actions">
+    <%= form.submit 'Submit', class: 'btn btn-primary btn-block'  %>
+  </div>
+<% end %>

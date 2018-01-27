@@ -1,0 +1,35 @@
+
+<div class="container">
+  <h2><%= @courses.title %></h2>
+  <div class="row">
+<% @guides.each do |guide| %>
+   <div class="col-md-12">
+      <div class="card">
+        <div class="card-body">
+          <div class="col-lg-5 float-left">
+            <%= image_tag guide.thumb_image, class: "thumb_image" %>
+           </div>
+          <div class="col-lg-7 float-right">
+            <h2><%= link_to guide.title, guide %></h2>
+            <p class="text-muted">Part: <%= guide.order_id %> of <%= guide.course.title %></p>
+            <hr>
+            <p><%= truncate(guide.body, :length => 110) %></p>
+           <!--  <td><%= guide.video_link %></td> -->
+            
+            
+            
+            <%= link_to 'View This Guide', guide, class:'btn btn-primary btn-block view-btn' %>
+            <%= link_to 'Edit', edit_guide_path(guide), class:'btn btn-secondary btn-block' %>
+            <%= link_to 'Destroy', guide, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-danger btn-block' %>
+          
+         </div>
+       </div>
+      </div>
+     </div> 
+
+<% end %>
+  </div>
+  <%= link_to 'Edit', edit_course_path(@course) %> |
+  <%= link_to 'Back', courses_path %>
+ </div> 
+

@@ -1,0 +1,57 @@
+@import "bootstrap";
+
+.btn{
+  border-radius: 0;
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+}
+.card{
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+  margin-bottom: 25px;
+}
+.main-content{
+  margin-top: 66px;
+}
+.navbar-toggler{
+  border:none;
+}
+.navbar{
+  -webkit-box-shadow: 0 1px 5px #454545;
+  -moz-box-shadow: 0 1px 5px #454545;
+  box-shadow: 0 1px 5px #454545;
+}
+.home-bg{
+    background: url('/assets/campbg1.png') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 90.6vh;
+}
+
+#welcome-card{
+  margin-top: 25vh;
+
+}
+
+#welcome-card .btn{
+  min-width: 148px;
+
+}
+
+.view-btn{
+  margin-top: 15px;
+}
+
+.video-panel{
+  width: 100%;
+}
+
+.show-page{
+  margin-top: 100px;
+}
+
+.thumb_image{
+  width: 100%;
+}
