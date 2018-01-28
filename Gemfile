@@ -56,3 +56,6 @@ gem 'jquery-rails'
 # syntax highlighting gems
 gem 'redcarpet', '~> 3.4'
 gem 'coderay', '~> 1.1', '>= 1.1.2'
+
+#authorization and authentication gems
+gem 'devise', '~> 4.4', '>= 4.4.1'
