@@ -1,5 +1,5 @@
 class TopicsController < ApplicationController
-
+layout 'content'
   def index
     @topics = Topic.all
   end
