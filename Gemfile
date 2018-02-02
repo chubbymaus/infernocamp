@@ -59,3 +59,4 @@ gem 'coderay', '~> 1.1', '>= 1.1.2'
 
 #authorization and authentication gems
 gem 'devise', '~> 4.4', '>= 4.4.1'
+gem 'petergate', '~> 1.8', '>= 1.8.1'
