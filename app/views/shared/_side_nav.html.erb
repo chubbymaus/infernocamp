@@ -24,10 +24,10 @@
                   <%= link_to "My Account", edit_user_registration_path, class: "nav-link" %>
               </li>
               <li class="nav-item">
-                  <%= link_to 'New Course', new_course_path, class: 'btn btn-primary btn-block' %>
+                  <%= link_to 'New Course', new_course_path, class: 'btn btn-primary btn-block' if logged_in?(:site_admin) %>
               </li>
               <li class="nav-item">
-                  <%= link_to 'New Guide', new_guide_path, class: 'btn btn-secondary btn-block' %>
+                  <%= link_to 'New Guide', new_guide_path, class: 'btn btn-secondary btn-block' if logged_in?(:site_admin) %>
               </li>
             </ul>
 

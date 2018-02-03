@@ -1,7 +1,7 @@
 class CoursesController < ApplicationController
   layout 'content'
   before_action :set_course, only: [:show, :edit, :update, :destroy]
-
+  access user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all
   # GET /courses
   # GET /courses.json
   def index

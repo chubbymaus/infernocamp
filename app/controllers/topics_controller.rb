@@ -1,4 +1,5 @@
 class TopicsController < ApplicationController
+  access user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all
 layout 'content'
   def index
     @topics = Topic.all

@@ -1,7 +1,7 @@
 class GuidesController < ApplicationController
   layout 'content'
   before_action :set_guide, only: [:show, :edit, :update, :destroy]
-
+  access user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all
   # GET /guides
   # GET /guides.json
   def index
