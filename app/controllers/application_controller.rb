@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
   def main_nav
     @topics = Topic.all
   end
-    
+
 
  def set_layout
     if current_user
@@ -18,5 +18,11 @@ class ApplicationController < ActionController::Base
   def configure_permitted_params
     devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name])
     devise_parameter_sanitizer.permit(:account_update, keys: [:first_name, :last_name])
-  end  
+  end 
+
+  private
+ 
+    def after_sign_in_path_for(resource)
+       mycourses_path
+    end 
 end
