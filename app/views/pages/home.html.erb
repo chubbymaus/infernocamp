@@ -9,8 +9,13 @@
             <div class="card-body">
               <h4 class="card-title">Welcome to Inferno Camp!</h4>
               <p class="card-text">Already a member of our site? Click sign in. Otherwise head over to the registration page to sign up!</p>
-              <%= link_to "Sign In", new_user_session_path, class: 'btn btn-primary' %>
-              <%= link_to "Register", new_user_registration_path, class:"btn btn-secondary" %>
+
+              <% if current_user %>
+                <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'btn btn-primary' %>
+              <% else %>
+                <%= link_to "Sign In", new_user_session_path, class: 'btn btn-primary' %>
+                <%= link_to "Register", new_user_registration_path, class: "btn btn-secondary" %>
+              <% end %>
             </div>
           </div>
          </div>
