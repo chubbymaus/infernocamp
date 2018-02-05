@@ -5,8 +5,16 @@ Rails.application.routes.draw do
   resources :topics, only: [:index, :show]
 
   
-  resources :courses
-  resources :guides
+  resources :courses do
+    collection do
+      get 'search'
+    end  
+  end  
+  resources :guides do
+    collection do
+      get 'search'
+    end  
+  end 
   get 'about', to: 'pages#about'
 
   get 'contact', to: 'pages#contact'

@@ -4,6 +4,15 @@ class GuidesController < ApplicationController
   access user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all
   # GET /guides
   # GET /guides.json
+
+  def search
+    if params[:search].present?
+      @guides = Guide.search(params[:search], fields: [:title, :body])
+    else
+      @guides = Guide.all
+    end   
+  end 
+
   def index
     @guides = Guide.all.order('order_id ASC')
   end

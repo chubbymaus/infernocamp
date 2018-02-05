@@ -65,3 +65,5 @@ gem 'petergate', '~> 1.8', '>= 1.8.1'
 gem 'gritter', '~> 1.2'
 
 gem 'acts_as_votable', '~> 0.11.1'
+
+gem 'searchkick', '~> 2.4'
