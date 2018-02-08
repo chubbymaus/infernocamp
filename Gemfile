@@ -67,3 +67,5 @@ gem 'gritter', '~> 1.2'
 gem 'acts_as_votable', '~> 0.11.1'
 
 gem 'searchkick', '~> 2.4'
+
+gem 'friendly_id', '~> 5.2', '>= 5.2.3'

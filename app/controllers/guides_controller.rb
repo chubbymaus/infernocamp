@@ -7,7 +7,7 @@ class GuidesController < ApplicationController
 
   def search
     if params[:search].present?
-      @guides = Guide.search(params[:search], fields: [:title, :body])
+      @guides = Guide.search(params[:search], fields: [:title, :body, :course_id])
     else
       @guides = Guide.all
     end   

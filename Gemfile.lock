@@ -79,6 +79,8 @@ GEM
     faraday (0.14.0)
       multipart-post (>= 1.2, < 3)
     ffi (1.9.18)
+    friendly_id (5.2.3)
+      activerecord (>= 4.0.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     gritter (1.2.0)
@@ -209,6 +211,7 @@ DEPENDENCIES
   coderay (~> 1.1, >= 1.1.2)
   coffee-rails (~> 4.2)
   devise (~> 4.4, >= 4.4.1)
+  friendly_id (~> 5.2, >= 5.2.3)
   gritter (~> 1.2)
   jbuilder (~> 2.5)
   jquery-rails
