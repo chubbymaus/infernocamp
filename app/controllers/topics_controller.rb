@@ -6,8 +6,8 @@ layout 'content'
   end
 
   def show
-    @topic_name = Topic.find(params[:id])
-    topic = Topic.find(params[:id])
+    @topic_name = Topic.friendly.find(params[:id])
+    topic = Topic.friendly.find(params[:id])
     @courses = topic.courses
   end
 

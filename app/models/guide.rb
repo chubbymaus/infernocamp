@@ -1,5 +1,7 @@
 class Guide < ApplicationRecord
   searchkick
+  extend FriendlyId
+  friendly_id :title, use: :slugged
   validates_presence_of :title, :body, :video_link, :thumb_image, :order_id, :course_id
   belongs_to :course, optional: true
 
