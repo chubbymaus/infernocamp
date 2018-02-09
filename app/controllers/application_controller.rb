@@ -23,6 +23,6 @@ class ApplicationController < ActionController::Base
   private
  
     def after_sign_in_path_for(resource)
-       mycourses_path
+       courses_path
     end 
 end
