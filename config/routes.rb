@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'favorites/guides'
+
+  get 'favorites/courses'
+
   get 'mycourses/index'
 
   devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'register'}
@@ -9,6 +13,10 @@ Rails.application.routes.draw do
     collection do
       get 'search'
     end  
+    member do
+      put "like",    to: "courses#upvote"
+      put "dislike", to: "courses#downvote"
+    end
   end  
   resources :guides do
     collection do

@@ -1,6 +1,20 @@
 
 <div class="container">
-  <h2><%= @courses.title %></h2>
+  <div class = "row">
+    <div class="col-md-4">
+    <h2><%= @courses.title %></h2>
+     </div>
+     <div class="col-md-8">
+                    <% if current_user.liked? @course  %>
+                      <%= link_to 'Remove From Favorites', dislike_course_path(@course), method: :put, class: "btn btn-danger"  %>
+                        
+                    <% else %> 
+
+                      <%= link_to 'Add To My Courses', like_course_path(@course), method: :put, class: "btn btn-secondary" %>
+                    <% end %>
+       </div>
+      </div>              
+                  
   <div class="row">
 <% @guides.each do |guide| %>
    <div class="col-md-12">
