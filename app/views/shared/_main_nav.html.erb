@@ -12,11 +12,12 @@
           
            <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Courses </a>
+                Topics </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <% @topics.each do |topic| %>
+                      <% if topic.courses.count > 0 %>
                       <%= link_to topic.title, topic, class: "dropdown-item" %>
-
+                      <% end %>
                   <% end %>
                   <hr>
                   <%= link_to 'View All Courses', courses_path, class: "dropdown-item" %>
