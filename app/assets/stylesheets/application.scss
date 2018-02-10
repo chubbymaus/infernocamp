@@ -129,3 +129,8 @@ body{
 .card{
   border-radius: 0;
 }
+@media (min-width:992px) {
+    .mycourse {
+        display:none !important;
+    }
+}

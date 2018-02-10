@@ -27,7 +27,7 @@ Rails.application.routes.draw do
       put "dislike", to: "guides#downvote"
     end
   end 
-  get 'about', to: 'pages#about'
+  
 
   get 'contact', to: 'pages#contact'
 
