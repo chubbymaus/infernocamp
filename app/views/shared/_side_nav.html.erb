@@ -4,14 +4,10 @@
 
 
               <li class="nav-item">
-                <a class="nav-link" href="#">
-                  Favorited Guides
-                </a>
+                <%= link_to "My Guides", favorites_guides_path, class: "nav-link" %>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">
-                  My Courses
-                </a>
+                  <%= link_to "My Courses", favorites_courses_path, class: "nav-link" %>
               </li>
               <li class="nav-item">
                   <%= link_to "My Account", edit_user_registration_path, class: "nav-link" %>

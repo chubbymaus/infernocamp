@@ -1,15 +1,15 @@
-
 <div class="container">
 
-<h1><%= @topic_name.title %></h1>
+
+<h1>My Saved Courses</h1>
+
   <div class="row">
-    
       <% @courses.each do |course| %>
              <div class="col-lg-4">
               <div class="card">
                 <div class="card-body">
                   
-                    <%= image_tag course.thumb_image, class: "thumb_image" %>
+                    <%= image_tag course.thumb_image %>
                    
                   
                     <h2><%= link_to course.title, course %></h2>
@@ -19,6 +19,7 @@
                     <hr>
                     <p><%= truncate(course.description, :length => 110) %></p>
                     <%= link_to 'View This Course', course, class:'btn btn-primary btn-block view-btn' %>
+
                     <% if current_user.liked? course  %>
                       <%= link_to 'Remove From Favorites', dislike_course_path(course), method: :put, class: "btn btn-danger btn-block"  %>
                         
@@ -27,8 +28,9 @@
                       <%= link_to 'Add To My Courses', like_course_path(course), method: :put, class: "btn btn-secondary btn-block" %>
                     <% end %>
                   
+
                     <%= link_to 'Edit', edit_course_path(course), class:'btn btn-secondary btn-block' if logged_in?(:site_admin) %>
-                    <%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-danger btn-block' if logged_in?(:site_admin)%>
+                    <%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-danger btn-block' if logged_in?(:site_admin) %>
                   
                  </div>
               </div>
@@ -36,4 +38,8 @@
 
       <% end %>
   </div>
+
+<br>
+
+
 </div>
