@@ -22,6 +22,10 @@ Rails.application.routes.draw do
     collection do
       get 'search'
     end  
+    member do
+      put "like",    to: "guides#upvote"
+      put "dislike", to: "guides#downvote"
+    end
   end 
   get 'about', to: 'pages#about'
 
@@ -29,7 +33,7 @@ Rails.application.routes.draw do
 
   root to: 'pages#home'
 
-  get 'mycourses', to: 'mycourses#index'
+  
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

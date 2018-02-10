@@ -33,6 +33,14 @@
             
             
             <%= link_to 'View This Guide', guide, class:'btn btn-primary btn-block view-btn' %>
+            
+            <% if current_user.liked? guide  %>
+              <%= link_to 'Remove From Favorites', dislike_guide_path(guide), method: :put, class: "btn btn-danger btn-block"  %>
+                
+            <% else %> 
+
+              <%= link_to 'Add To My Guides', like_guide_path(guide), method: :put, class: "btn btn-secondary btn-block" %>
+            <% end %>
             <%= link_to 'Edit', edit_guide_path(guide), class:'btn btn-secondary btn-block' if logged_in?(:site_admin) %>
             <%= link_to 'Destroy', guide, method: :delete, data: { confirm: 'Are you sure?' }, class:'btn btn-danger btn-block' if logged_in?(:site_admin)%>
           
