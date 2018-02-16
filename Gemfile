@@ -73,3 +73,5 @@ gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
 gem 'mail_form', '~> 1.7'
 
 gem "font-awesome-rails"
+
+ruby "2.4.0"

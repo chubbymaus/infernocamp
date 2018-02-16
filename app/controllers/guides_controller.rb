@@ -83,6 +83,7 @@ class GuidesController < ApplicationController
     @guide = Guide.friendly.find(params[:id])
     @guide.downvote_by current_user
     redirect_back(fallback_location: root_path)
+    
   end 
 
   private
