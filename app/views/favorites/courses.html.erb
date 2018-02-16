@@ -2,7 +2,10 @@
 
 
 <h1>My Saved Courses</h1>
-
+    <% if @courses.blank? %>
+      <h5>It's pretty empty here... head over to the courses page to start learning today!</h5>
+      <%= link_to 'Find a Course', courses_path, class:'btn btn-primary ' %>
+    <% end %>
   <div class="row">
       <% @courses.each do |course| %>
              <div class="col-lg-4">
