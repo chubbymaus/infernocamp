@@ -27,5 +27,6 @@ module InfernoCamp
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+    confige.secret_key_base = ENV["SECRET_KEY_BASE"]
   end
 end
