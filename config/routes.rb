@@ -28,6 +28,7 @@ Rails.application.routes.draw do
     end
   end 
   
+  resources :contacts, only: [:new, :create]
 
   get 'contact', to: 'pages#contact'
 

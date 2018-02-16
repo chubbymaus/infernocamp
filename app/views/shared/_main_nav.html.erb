@@ -7,9 +7,9 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav ml-auto">
           <% if current_user %>
-          <%= link_to "Home", root_path, class: 'nav-link' %>
-          <%= link_to "My Courses", favorites_courses_path, class: "nav-link mycourse" %>
           
+          <%= link_to "My Dashboard", favorites_courses_path, class: "nav-link" %>
+         
            <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Find A Course </a>
@@ -25,7 +25,7 @@
               </div>
             </li>
             <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: 'nav-link' %>
-            <%= link_to "Contact Us", contact_path, class: 'nav-link' %>
+            <%= link_to "Contact Us", new_contact_path, class: 'nav-link' %>
             
             <%= form_tag search_guides_path, method: :get, class: "form-inline mt-2 mt-md-0", role: "search" do %> 
               <%= text_field_tag :search, params[:search], class: "form-control mr-sm-2" %>
@@ -33,7 +33,7 @@
             <% end %>
             <% else %>
               <%= link_to "Sign In", new_user_session_path, class: 'nav-link' %>
-              <%= link_to "Contact Us", contact_path, class: 'nav-link' %>
+              <%= link_to "Contact Us", new_contact_path, class: 'nav-link' %>
             <% end %>  
             
             

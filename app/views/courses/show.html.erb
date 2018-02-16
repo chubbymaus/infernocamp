@@ -3,6 +3,14 @@
   <div class = "row">
     <div class="col-md-4">
     <h2><%= @courses.title %></h2>
+
+    <h4>Topic: <%= link_to @course.topic.title, @course.topic %> </h4>
+    <% if logged_in?(:site_admin) %>
+  
+      <%= link_to 'Edit', edit_course_path(@course) %> |
+      <%= link_to 'Back', courses_path %>
+     
+    <% end %>
      </div>
      <div class="col-md-8">
                     <% if current_user.liked? @course  %>
@@ -13,7 +21,10 @@
                       <%= link_to 'Add To My Courses', like_course_path(@course), method: :put, class: "btn btn-secondary" %>
                     <% end %>
        </div>
-      </div>              
+       <div class="col-md-12">
+           <p><%= @course.description %></p>
+       </div> 
+    </div>              
                   
   <div class="row">
 <% @guides.each do |guide| %>
@@ -50,8 +61,6 @@
      </div> 
 
 <% end %>
-  </div>
-  <%= link_to 'Edit', edit_course_path(@course) %> |
-  <%= link_to 'Back', courses_path %>
- </div> 
+</div>
+</div>
 

@@ -71,3 +71,5 @@ gem 'searchkick', '~> 2.4'
 gem 'friendly_id', '~> 5.2', '>= 5.2.3'
 
 gem 'mail_form', '~> 1.7'
+
+gem "font-awesome-rails"

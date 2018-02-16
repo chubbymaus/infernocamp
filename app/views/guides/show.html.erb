@@ -1,9 +1,11 @@
 
 <div class="container">
  <div class='row'> 
+
     <div class="col-md-1">
      </div> 
       <div class="col-md-10"> 
+        <%= link_to '<i class="fa fa-arrow-left" aria-hidden="true"></i> Back to course'.html_safe, @guide.course %>
 
         <div class="card">
          <%= video_tag @guide.video_link, class:"card-img-top video-panel" %>
@@ -11,14 +13,22 @@
         <h2 class="card-text">
           <%= @guide.title %>
         </h2>
+
+          <% if logged_in?(:site_admin) %>
+          <h4>
+          <%= link_to fa_icon('pencil-square-o'), edit_guide_path(@guide) %> |
+          <%= link_to 'Back', :back %>
+          </h4>
+          <% end %>
+
         <p class="text-muted card-text">
-          Part: <%= @guide.order_id %> of <%= @guide.course.title %>
+          Part: <%= @guide.order_id %> of <%= link_to @guide.course.title, @guide.course %>
         </p>
+
       </div>
+</div>
+    
 
-
-
-        </div>
 
           <div>
             
@@ -28,9 +38,9 @@
             <strong>Thumb image:</strong>
             <%= @guide.thumb_image %>
           </p> -->
-          <%= link_to 'Edit', edit_guide_path(@guide) if logged_in?(:site_admin) %> |
-          <%= link_to 'Back', :back %>
+
           </div>
+
     <div class="col-md-1">
      </div>
  </div> 
