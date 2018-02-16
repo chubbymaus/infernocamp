@@ -66,6 +66,10 @@ GEM
       railties (>= 4.1.0, < 5.2)
       responders
       warden (~> 1.2.3)
+    dotenv (2.2.1)
+    dotenv-rails (2.2.1)
+      dotenv (= 2.2.1)
+      railties (>= 3.2, < 5.2)
     elasticsearch (6.0.1)
       elasticsearch-api (= 6.0.1)
       elasticsearch-transport (= 6.0.1)
@@ -216,6 +220,7 @@ DEPENDENCIES
   coderay (~> 1.1, >= 1.1.2)
   coffee-rails (~> 4.2)
   devise (~> 4.4, >= 4.4.1)
+  dotenv-rails (~> 2.2, >= 2.2.1)
   font-awesome-rails
   friendly_id (~> 5.2, >= 5.2.3)
   gritter (~> 1.2)

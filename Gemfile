@@ -69,7 +69,7 @@ gem 'acts_as_votable', '~> 0.11.1'
 gem 'searchkick', '~> 2.4'
 
 gem 'friendly_id', '~> 5.2', '>= 5.2.3'
-
+gem 'dotenv-rails', '~> 2.2', '>= 2.2.1'
 gem 'mail_form', '~> 1.7'
 
 gem "font-awesome-rails"

@@ -7,8 +7,8 @@
 
     def headers 
       {
-      :subject => "Contact Form From <WEBSITE NAME>",
-      :to => "(ENTER WHERE YOU WANT THE EMAIL TO GO HERE)",
+      :subject => "Contact Form From Inferno Camp",
+      :to => "court@infernoapps.com",
       :from => "#{name} <#{email}>"
       } 
     end
