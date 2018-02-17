@@ -1,12 +1,12 @@
 
 <div class="container">
 <h1>Favorite Guides</h1>
-
-  <div class="row">
     <% if @guides.blank? %>
       <h5>Guides will show here when you click on 'Add To My Guides.' This will make the guide easier to find later!</h5>
 
     <% end %>
+  <div class="row">
+
     <% @guides.each do |guide| %>
     <div class="col-md-4">
       <div class="card">

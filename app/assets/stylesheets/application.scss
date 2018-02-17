@@ -20,6 +20,9 @@ $light: $gray-100;
 .main-content{
   margin-top: 66px;
 }
+main{
+  margin-top: 66px;
+}
 .navbar-toggler{
   border:none;
 }
@@ -139,8 +142,21 @@ body{
         display:none !important;
     }
 }
-@media (max-width:992px) {
+@media (max-width: 992px) {
     .sidebar {
         display:none !important;
     }
+}
+
+@media (min-width: 768px){
+
+.navbar-expand-md .navbar-nav .nav-link {
+padding-left: 0;
+
+}
+}
+@media screen and (max-width: 992px) and (min-width: 768px){
+  .searchbox{
+    display: none;
+  }
 }
