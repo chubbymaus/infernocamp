@@ -1,5 +1,5 @@
 class Course < ApplicationRecord
-  searchkick
+  
   acts_as_votable
   extend FriendlyId
   friendly_id :title, use: :slugged
