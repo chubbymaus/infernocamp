@@ -8,7 +8,7 @@
         <%= link_to '<i class="fa fa-arrow-left" aria-hidden="true"></i> Back to course'.html_safe, @guide.course %>
 
         <div class="card">
-         <%= video_tag @guide.video_link, class:"card-img-top video-panel" %>
+         <%= video_tag @guide.video_link, :controls => true, class:"card-img-top video-panel" %>
         <div class="card-body">
         <h2 class="card-text">
           <%= @guide.title %>
